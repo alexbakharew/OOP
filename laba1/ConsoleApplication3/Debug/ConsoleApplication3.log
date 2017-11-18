@@ -1,0 +1,9 @@
+﻿  main.cpp
+c:\users\alexb\source\repos\consoleapplication3\consoleapplication3\main.cpp(17): error C2259: 'Figure': cannot instantiate abstract class
+  c:\users\alexb\source\repos\consoleapplication3\consoleapplication3\main.cpp(17): note: due to following members:
+  c:\users\alexb\source\repos\consoleapplication3\consoleapplication3\main.cpp(17): note: 'double Figure::Square(void)': is abstract
+  c:\users\alexb\source\repos\consoleapplication3\consoleapplication3\figure.h(6): note: see declaration of 'Figure::Square'
+  c:\users\alexb\source\repos\consoleapplication3\consoleapplication3\main.cpp(17): note: 'void Figure::Print(void)': is abstract
+  c:\users\alexb\source\repos\consoleapplication3\consoleapplication3\figure.h(7): note: see declaration of 'Figure::Print'
+  c:\users\alexb\source\repos\consoleapplication3\consoleapplication3\main.cpp(17): note: 'Figure::~Figure(void)': is abstract
+  c:\users\alexb\source\repos\consoleapplication3\consoleapplication3\figure.h(8): note: see declaration of 'Figure::~Figure'
