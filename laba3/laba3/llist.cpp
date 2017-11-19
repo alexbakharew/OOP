@@ -18,56 +18,105 @@ TLList::~TLList()
 {
 
 }
-PTItem* TLList::get_root()
+PTItem TLList::get_root()
 {
 	return root;
 }
-PTItem* TLList::move_to(size_t n) // 0 <= n <= length
+PTItem TLList::move_to(size_t n) // 0 <= n <= length
 {
-	PTItem* curr = get_root();
+	PTItem curr = get_root();
+	if (curr == nullptr) return curr;
 	int i = 0;
-	while (curr != nullptr && i != n)
+	while (i != n)
 	{
-		curr = curr->get()->get_next();
-		i++;
+		if (curr.get()->get_next() != nullptr)
+		{
+			curr = (curr.get())->get_next();
+			i++;
+		}
+		else
+		{
+			return curr;
+		}
 	}
 	return curr;
 }
 void TLList::insert(const PFig& fig, size_t n)
 {
-	PTItem* curr = move_to(n);
-	PTItem* item = new PTItem(new TItem(fig));
+	PTItem curr = move_to(n);
+	PTItem item = PTItem(new TItem(fig));
 	if (curr == nullptr)
 	{
 		root = item;
 		return;
 	}
-	PTItem* next = curr->get()->get_next();
-	item->get()->set_next(next);
-	item->get()->set_prev(curr);
-	return;
+	PTItem next = (curr.get())->get_next(); // null
+	(item.get())->set_next(next);
+	(item.get())->set_prev(curr);
+	(curr.get())->set_next(item);
+	if (next == nullptr) return;
+	else
+	{
+		next.get()->set_prev(item);
+		return;
+	}
 }
 void TLList::print_i(size_t n)
 {
-	PTItem* curr = move_to(n);
-	std::cout << curr << std::endl;
+	PTItem curr = move_to(n);
+	if (curr == nullptr)
+	{
+		std::cout << "List is empty!" << std::endl;
+		return;
+	}
+	std::cout << curr.get() << std::endl;
 	return;
 }
 void TLList::print_all()
 {
-	PTItem* curr = get_root();
+	PTItem curr = get_root();
+	if (curr == nullptr)
+	{
+		std::cout << "List is empty!" << std::endl;
+		return;
+	}
 	while (curr != nullptr)
 	{
-		std::cout << curr << std::endl;
-		curr->get()->set_next(curr->get()->get_next());
+		std::cout << curr.get()->get_figure() << std::endl;
+		curr = curr.get()->get_next();
 	}
 	return;
 }
 void TLList::remove(size_t n)
 {
-	PTItem* curr = move_to(n);
-	curr->get()->get_prev()->get()->set_next(curr->get()->get_next());
-	curr->get()->get_next()->get()->set_prev(curr->get()->get_prev());
-	delete curr;
-	return;
+	PTItem curr = move_to(n);
+	if (curr == nullptr)
+	{
+		std::cout << "List is empty!" << std::endl;
+		return;
+	}
+	PTItem next = curr.get()->get_next();
+	PTItem prev = curr.get()->get_prev();
+	if (prev == nullptr && next == nullptr)//only 1 elem in list!
+	{
+		root = nullptr;
+		return;
+	}
+	else if (prev == nullptr && next != nullptr)// we want to delete root
+	{
+		root = next;
+		next.get()->set_prev(prev);
+		return;
+	}
+	else if (prev != nullptr && next == nullptr)
+	{
+		prev.get()->set_next(next);
+		return;
+	}
+	else
+	{
+		prev.get()->set_next(next);
+		next.get()->set_prev(prev);
+		return;
+	}
 }

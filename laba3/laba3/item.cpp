@@ -14,28 +14,28 @@ TItem::TItem(const PFig& fgr)
 	prev = nullptr;
 }
 TItem::~TItem(){}
-PTItem* TItem::get_next()
+PTItem TItem::get_next()
 {
 	return next;
 }
-PTItem* TItem::get_prev()
+PTItem TItem::get_prev()
 {
 	return prev;
 }
-PFig* TItem::get_figure()
+PFig TItem::get_figure() 
 {
-	return &figure;
+	return figure;
 }
-void TItem::set_next(PTItem* nxt)
+void TItem::set_next(PTItem nxt)
 {
 	next = nxt;
 }
-void TItem::set_prev(PTItem* prv)
+void TItem::set_prev(PTItem prv)
 {
 	prev = prv;
 }
-std::ostream& operator<<(std::ostream& os, const PTItem& item)
+std::ostream& operator<<(std::ostream& os, const TItem& item)
 {
-	os << item.get()->figure << std::endl;
+	os << item.get_figure().get() << std::endl;
 	return os;
 }

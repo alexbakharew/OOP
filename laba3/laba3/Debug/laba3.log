@@ -1,2 +1,4 @@
-﻿  main.cpp
-  laba3.vcxproj -> C:\Users\repeinik\Documents\GitHub\OOP\laba3\Debug\laba3.exe
+﻿  item.cpp
+c:\users\repeinik\documents\github\oop\laba3\laba3\item.cpp(39): error C2662: 'PFig TItem::get_figure(void)': cannot convert 'this' pointer from 'const TItem' to 'TItem &'
+  c:\users\repeinik\documents\github\oop\laba3\laba3\item.cpp(39): note: Conversion loses qualifiers
+c:\users\repeinik\documents\github\oop\laba3\laba3\item.cpp(39): error C2228: left of '.get' must have class/struct/union

@@ -15,14 +15,14 @@ class TItem
 public:
 	TItem(const PFig&);
 	~TItem();
-	PTItem* get_next();
-	PTItem* get_prev();
-	PFig* get_figure();
-	void set_next(PTItem*);
-	void set_prev(PTItem*);
-	friend std::ostream& operator<<(std::ostream&, const PTItem&);
+	PTItem get_next();
+	PTItem get_prev();
+	PFig get_figure();
+	void set_next(PTItem);
+	void set_prev(PTItem);
+	friend std::ostream& operator<<(std::ostream&, const TItem&);
 private:
 	PFig figure;
-	PTItem* next;
-	PTItem* prev;
+	PTItem next;
+	PTItem prev;
 };
