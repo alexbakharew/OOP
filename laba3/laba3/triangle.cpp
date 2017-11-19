@@ -34,11 +34,12 @@ double Triangle::Square()
 	double p = double(side_a + side_b + side_c) / 2;
 	return sqrt(p*(p - side_a)*(p - side_b)*(p - side_c));
 }
-std::ostream& operator<<(std::ostream& os, const Triangle& trngl)
+double Triangle::Print()
 {
 	std::cout << "Here is a TRIANGLE with following sides:" << std::endl;
-	std::cout << "side a = " << trngl.side_a << std::endl;
-	std::cout << "side b = " << trngl.side_b << std::endl;
-	std::cout << "side c = " << trngl.side_c << std::endl;
-	return os;
+	std::cout << "side a = " << side_a << std::endl;
+	std::cout << "side b = " << side_b << std::endl;
+	std::cout << "side c = " << side_c << std::endl;
+	std::cout << "Square = ";
+	return Square();
 }

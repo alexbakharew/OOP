@@ -16,13 +16,15 @@ TLList::TLList()
 }
 TLList::~TLList()
 {
-
+	std::cout << "Deletion of list" << std::endl;
+	while(!remove(0)){}
+	std::cout << "list was deleted!" << std::endl;
 }
 PTItem TLList::get_root()
 {
 	return root;
 }
-PTItem TLList::move_to(size_t n) // 0 <= n <= length
+PTItem TLList::move_to(size_t n) 
 {
 	PTItem curr = get_root();
 	if (curr == nullptr) return curr;
@@ -50,7 +52,7 @@ void TLList::insert(const PFig& fig, size_t n)
 		root = item;
 		return;
 	}
-	PTItem next = (curr.get())->get_next(); // null
+	PTItem next = (curr.get())->get_next(); 
 	(item.get())->set_next(next);
 	(item.get())->set_prev(curr);
 	(curr.get())->set_next(item);
@@ -69,7 +71,7 @@ void TLList::print_i(size_t n)
 		std::cout << "List is empty!" << std::endl;
 		return;
 	}
-	std::cout << curr.get() << std::endl;
+	std::cout << curr << std::endl;
 	return;
 }
 void TLList::print_all()
@@ -82,41 +84,41 @@ void TLList::print_all()
 	}
 	while (curr != nullptr)
 	{
-		std::cout << curr.get()->get_figure() << std::endl;
+		std::cout << curr << std::endl;
 		curr = curr.get()->get_next();
 	}
 	return;
 }
-void TLList::remove(size_t n)
+bool TLList::remove(size_t n)
 {
 	PTItem curr = move_to(n);
 	if (curr == nullptr)
 	{
 		std::cout << "List is empty!" << std::endl;
-		return;
+		return false;
 	}
 	PTItem next = curr.get()->get_next();
 	PTItem prev = curr.get()->get_prev();
 	if (prev == nullptr && next == nullptr)//only 1 elem in list!
 	{
 		root = nullptr;
-		return;
+		return true;
 	}
 	else if (prev == nullptr && next != nullptr)// we want to delete root
 	{
 		root = next;
 		next.get()->set_prev(prev);
-		return;
+		return true;
 	}
 	else if (prev != nullptr && next == nullptr)
 	{
 		prev.get()->set_next(next);
-		return;
+		return true;
 	}
 	else
 	{
 		prev.get()->set_next(next);
 		next.get()->set_prev(prev);
-		return;
+		return true;
 	}
 }

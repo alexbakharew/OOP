@@ -31,20 +31,22 @@ Hexagon::~Hexagon()
 {
 	std::cout << "Hexagon was deleted" << std::endl;
 }
-std::ostream& operator<<(std::ostream& os, const Hexagon& hxgn)
+double Hexagon::Print()
 {
-	os << "Here is a HEXAGON with following sides:" << std::endl;
+	std::cout << "Here is a Hexagon with following sides:" << std::endl;
 	for (int i = 0; i < 6; i++)
 	{
-		os << "side " << i << " = ";
+		std::cout << "side " << i << " = ";
 		if (i == 5)
 		{
-			os << length(hxgn.dots[0], hxgn.dots[5]) << std::endl;
-			return os;
+			std::cout << length(dots[0], dots[5]) << std::endl;
+			std::cout << "Square = ";
+			return Square();
 		}
-		os << length(hxgn.dots[i], hxgn.dots[i + 1]) << std::endl;
+		std::cout << length(dots[i], dots[i + 1]) << std::endl;
 	}
-	return os;
+	std::cout << "Square = ";
+	return Square();
 }
 double Hexagon::Square()
 {

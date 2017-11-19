@@ -7,7 +7,7 @@ class Hexagon : public IFigure
 public:
 	Hexagon();
 	Hexagon(std::istream &is);
-	friend std::ostream& operator<<(std::ostream&, const Hexagon&);
+	double Print() override;
 	double Square() override;
 	virtual ~Hexagon();
 private:

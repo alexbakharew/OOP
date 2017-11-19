@@ -7,8 +7,8 @@
 #include "octagon.h"
 #include "triangle.h"
 class TItem;
-typedef std::shared_ptr<TItem> PTItem; // Item of list with shared_ptr
-typedef std::shared_ptr<IFigure> PFig;
+typedef std::shared_ptr<TItem> PTItem; // wrapper for TItem using shared_ptr
+typedef std::shared_ptr<IFigure> PFig; // wrapper for figures using shared_ptr
 
 class TItem
 {
@@ -20,7 +20,7 @@ public:
 	PFig get_figure();
 	void set_next(PTItem);
 	void set_prev(PTItem);
-	friend std::ostream& operator<<(std::ostream&, const TItem&);
+	friend std::ostream& operator<<(std::ostream&, const PTItem&);
 private:
 	PFig figure;
 	PTItem next;

@@ -16,7 +16,7 @@ public:
 	PTItem move_to(size_t);
 	void insert(const PFig&, size_t);
 	void print_i(size_t);
-	void remove(size_t);
+	bool remove(size_t);
 	void print_all();
 private:
 	PTItem root;

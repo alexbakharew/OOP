@@ -34,8 +34,8 @@ void TItem::set_prev(PTItem prv)
 {
 	prev = prv;
 }
-std::ostream& operator<<(std::ostream& os, const TItem& item)
+std::ostream& operator<<(std::ostream& os, const PTItem& item)
 {
-	os << item.get_figure().get() << std::endl;
+	os << item.get()->figure.get()->Print() << std::endl;
 	return os;
 }

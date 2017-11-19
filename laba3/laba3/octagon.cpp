@@ -27,20 +27,22 @@ Octagon::~Octagon()
 {
 	std::cout << "Octagon was deleted" << std::endl;
 }
-std::ostream& operator<<(std::ostream& os, const Octagon& octgn)
+double Octagon::Print()
 {
-	os << "Here is a OCTAGON with following sides:" << std::endl;
-	for (int i = 0; i < 6; i++)
+	std::cout<< "Here is a OCTAGON with following sides:" << std::endl;
+	for (int i = 0; i < 8; i++)
 	{
-		os << "side " << i << " = ";
-		if (i == 5)
+		std::cout << "side " << i << " = ";
+		if (i == 7)
 		{
-			os << length(octgn.dots[0], octgn.dots[5]) << std::endl;
-			return os;
+			std::cout << length(dots[0], dots[7]) << std::endl;
+			std::cout << "Square = ";
+			return Square();
 		}
-		os << length(octgn.dots[i], octgn.dots[i + 1]) << std::endl;
+		std::cout << length(dots[i], dots[i + 1]) << std::endl;
 	}
-	return os;
+	std::cout << "Square = ";
+	return Square();
 }
 double Octagon::Square()
 {

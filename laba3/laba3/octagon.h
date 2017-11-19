@@ -7,7 +7,7 @@ class Octagon : public IFigure
 public:
 	Octagon();
 	Octagon(std::istream &is);
-	friend std::ostream& operator<<(std::ostream&, const Octagon&);
+	double Print() override;
 	double Square() override;
 	virtual ~Octagon();
 private:
