@@ -1,51 +1,21 @@
 ﻿  main.cpp
+c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(54): error C2512: 'TItem<IFigure>': no appropriate default constructor available
+  c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(52): note: while compiling class template member function 'void TLList<IFigure>::insert(const std::shared_ptr<T> &,::size_t)'
+          with
+          [
+              T=IFigure
+          ]
+  c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(133): note: see reference to class template instantiation 'TLList<IFigure>' being compiled
   llist.cpp
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(16): error C2947: expecting '>' to terminate template-argument-list, found '<'
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(24): note: see reference to class template instantiation 'TLList<T>' being compiled
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(16): error C2143: syntax error: missing ';' before '>>'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(16): error C2238: unexpected token(s) preceding ';'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(17): error C2947: expecting '>' to terminate template-argument-list, found '<'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(17): error C2143: syntax error: missing ';' before '>>'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(17): error C2086: 'std::shared_ptr<TItem> TLList<T>::T': redefinition
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(16): note: see declaration of 'TLList<T>::T'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(17): error C2238: unexpected token(s) preceding ';'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(18): error C2327: 'TLList<T>::T': is not a type name, static, or enumerator
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(23): error C2947: expecting '>' to terminate template-argument-list, found '<'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(23): error C2143: syntax error: missing ';' before '>>'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(23): error C2086: 'std::shared_ptr<TItem> TLList<T>::T': redefinition
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(16): note: see declaration of 'TLList<T>::T'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(23): error C2238: unexpected token(s) preceding ';'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(26): error C2947: expecting '>' to terminate template-argument-list, found '<'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(26): error C2988: unrecognizable template declaration/definition
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(26): error C2143: syntax error: missing ';' before '>>'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(26): error C2365: 'T': redefinition; previous definition was 'template parameter'
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(25): note: see declaration of 'T'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(26): error C2059: syntax error: '>>'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(26): error C2065: 'T': undeclared identifier
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(26): error C2923: 'TLList': 'T' is not a valid template type argument for parameter 'T'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(27): error C2143: syntax error: missing ';' before '{'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(27): error C2447: '{': missing function header (old-style formal list?)
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(31): error C2947: expecting '>' to terminate template-argument-list, found '<'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(31): error C2988: unrecognizable template declaration/definition
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(31): error C2143: syntax error: missing ';' before '>>'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(31): error C2365: 'T': redefinition; previous definition was 'template parameter'
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(30): note: see declaration of 'T'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(31): error C2059: syntax error: '>>'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(31): error C2065: 'T': undeclared identifier
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(31): error C2923: 'TLList': 'T' is not a valid template type argument for parameter 'T'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(32): error C2143: syntax error: missing ';' before '{'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(32): error C2447: '{': missing function header (old-style formal list?)
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(51): error C2597: illegal reference to non-static member 'TLList<T>::T'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(51): error C2923: 'std::shared_ptr': 'TLList<T>::T' is not a valid template type argument for parameter '_Ty'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(52): error C2244: 'TLList<T>::insert': unable to match function definition to an existing declaration
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(51): note: see declaration of 'TLList<T>::insert'
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(52): note: definition
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(52): note: 'void TLList<T>::insert(const std::shared_ptr &,::size_t)'
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(52): note: existing declarations
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.cpp(52): note: 'void TLList<T>::insert(const std::shared_ptr<_Ty> &,::size_t)'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(17): error C2086: 'std::shared_ptr<TItem> TLList<IFigure>::T': redefinition
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(16): note: see declaration of 'TLList<IFigure>::T'
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(18): error C2327: 'TLList<IFigure>::T': is not a type name, static, or enumerator
-c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(23): error C2086: 'std::shared_ptr<TItem> TLList<IFigure>::T': redefinition
-  c:\users\repeinik\documents\github\oop\laba3\laba3\llist.h(16): note: see declaration of 'TLList<IFigure>::T'
+c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(54): error C2512: 'TItem<T>': no appropriate default constructor available
+          with
+          [
+              T=IFigure
+          ]
+  c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(52): note: while compiling class template member function 'void TLList<IFigure>::insert(const std::shared_ptr<T> &,::size_t)'
+          with
+          [
+              T=IFigure
+          ]
+  c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(133): note: see reference to class template instantiation 'TLList<IFigure>' being compiled
   Generating Code...
