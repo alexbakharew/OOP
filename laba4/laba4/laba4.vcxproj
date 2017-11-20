@@ -143,6 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\laba3\laba3\llist.h" />
     <ClInclude Include="figure.h" />
     <ClInclude Include="hexagon.h" />
     <ClInclude Include="item.h" />
@@ -152,6 +153,7 @@
     <ClInclude Include="triangle.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\laba3\laba3\llist.cpp" />
     <ClCompile Include="hexagon.cpp" />
     <ClCompile Include="item.cpp" />
     <ClCompile Include="main.cpp" />

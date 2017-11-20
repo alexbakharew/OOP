@@ -11,17 +11,19 @@ template<class T>
 class TItem
 {
 public:
-	TItem(const T&);
-	//~TItem<T>();
-	TItem<T> get_next();
-	TItem<T> get_prev();
-	TItem<T> get_item();
-	void set_next(TItem<T>);
-	void set_prev(TItem<T>);
-	//template <typename K>
-	friend std::ostream& operator<<(std::ostream&, const TItem<T>&);
+	//std::shared_ptr<>
+	TItem(const std::shared_ptr<T>&);
+	~TItem();
+	std::shared_ptr<TItem<T>> get_next();
+	std::shared_ptr<TItem<T>> get_prev();
+	std::shared_ptr<T> get_item();
+	void set_next(std::shared_ptr<TItem<T>>);
+	void set_prev(std::shared_ptr<TItem<T>>);
+	template <typename K>
+	friend std::ostream& operator<<(std::ostream&, const std::shared_ptr<TItem<K>>&);
 private:
-	T item;
-	TItem<T>* next;
-	TItem<T>* prev;
+	std::shared_ptr<T> item;
+	std::shared_ptr<TItem<T>> next;
+	std::shared_ptr<TItem<T>> prev;
 };
+
