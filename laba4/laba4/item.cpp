@@ -43,10 +43,13 @@ void TItem<T>::set_prev(std::shared_ptr<TItem<T>> prv)
 	prev = prv;
 }
 template<class T>
-std::ostream& operator<<(std::ostream& os, const std::shared_ptr<T>& item)
+std::ostream& operator<<(std::ostream& os, const std::shared_ptr<TItem<T>>& item)
 {
-	os << item.get().get_item() << std::endl;
+	os << (item.get()->get_item()).get() << std::endl;
 	//os << item.get()->figure.get()->Print() << std::endl;
 	return os;
 }
-template TItem<IFigure>;
+//template TItem<IFigure>;
+template TItem<Triangle>;
+template TItem<Hexagon>;
+template TItem<Octagon>;

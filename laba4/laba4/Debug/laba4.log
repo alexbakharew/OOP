@@ -1,21 +1,6 @@
-﻿  main.cpp
-c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(54): error C2512: 'TItem<IFigure>': no appropriate default constructor available
-  c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(52): note: while compiling class template member function 'void TLList<IFigure>::insert(const std::shared_ptr<T> &,::size_t)'
-          with
-          [
-              T=IFigure
-          ]
-  c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(133): note: see reference to class template instantiation 'TLList<IFigure>' being compiled
-  llist.cpp
-c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(54): error C2512: 'TItem<T>': no appropriate default constructor available
-          with
-          [
-              T=IFigure
-          ]
-  c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(52): note: while compiling class template member function 'void TLList<IFigure>::insert(const std::shared_ptr<T> &,::size_t)'
-          with
-          [
-              T=IFigure
-          ]
-  c:\users\repeinik\documents\github\oop\laba4\laba4\llist.cpp(133): note: see reference to class template instantiation 'TLList<IFigure>' being compiled
+﻿  item.cpp
   Generating Code...
+  Skipping... (no relevant changes detected)
+  main.cpp
+  llist.cpp
+  laba4.vcxproj -> C:\Users\repeinik\Documents\GitHub\OOP\laba4\Debug\laba4.exe

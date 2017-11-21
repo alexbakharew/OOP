@@ -8,6 +8,7 @@
 #include "triangle.h"
 #include "item.h"
 #include "llist.h"
+
 template<class T>
 TLList<T>::TLList()
 {
@@ -19,7 +20,7 @@ template<class T>
 TLList<T>::~TLList()
 {
 	std::cout << "Deletion of list" << std::endl;
-	while(!remove(0)){}
+	while(remove(0)){}
 	std::cout << "list was deleted!" << std::endl;
 }
 template<class T>
@@ -51,7 +52,8 @@ template<class T>
 void TLList<T>::insert(const std::shared_ptr<T>& fig, size_t n)
 {
 	std::shared_ptr<TItem<T>> curr = move_to(n);
-	std::shared_ptr<TItem<T>> item = (new TItem<T>);
+	//TItem<T> item(fig);
+	std::shared_ptr<TItem<T>> item(new TItem<T>(fig));
 	if (curr == nullptr)
 	{
 		root = item;
