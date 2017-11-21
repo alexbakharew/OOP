@@ -11,7 +11,6 @@ template<class T>
 class TItem
 {
 public:
-	//std::shared_ptr<>
 	TItem(const std::shared_ptr<T>&);
 	~TItem();
 	std::shared_ptr<TItem<T>> get_next();
