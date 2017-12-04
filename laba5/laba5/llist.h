@@ -18,6 +18,8 @@ public:
 	void print_i(size_t);
 	bool remove(size_t);
 	void print_all();
+	template<typename K>
+	friend std::ostream& operator<<(std::ostream&, const TLList<K>&);
 	TIterator<TItem<T>, T> begin();
 	TIterator<TItem<T>, T> end();
 private:
@@ -25,3 +27,4 @@ private:
 	std::shared_ptr<TItem<T>> move_to(size_t);
 	std::shared_ptr<TItem<T>> root;
 };
+

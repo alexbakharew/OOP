@@ -15,21 +15,27 @@ public:
 	{
 		std::cout << "Iter was deleted!" << std::endl;
 	}
-    TIterator operator ++ ()
+    void operator ++()
 	{
-		return node_ptr.get()->get_next();
+		node_ptr = node_ptr.get()->get_next();
 	}
-	TIterator operator -- ()
+	/*TIterator operator ++(int)
 	{
-		return node_ptr.get()->get_prev();
+		TIterator iter(*this);
+		++(this);
+		return iter;
+	}*/
+	void operator --()
+	{
+		node_ptr = node_ptr.get()->get_prev();
 	}
-	std::shared_ptr<T> operator *()
+	std::shared_ptr<TItem<T>> operator *()
 	{
-		return node_ptr.get()->get_item();
+		return node_ptr;
 	}
-	std::shared_ptr<T> operator ->()
+	std::shared_ptr<TItem<T>> operator ->()
 	{
-		return node_ptr.get()->get_item();
+		return node_ptr;
 	}
 	bool operator ==(TIterator const& iter)
 	{

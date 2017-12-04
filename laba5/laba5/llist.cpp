@@ -11,12 +11,12 @@
 #include "iterator.h"
 
 template<class T>
-TLList<T>::TLList()
-{
+TLList<T>::TLList() : root(nullptr) {}
+/*{
 	std::cout << "Creation of List" << std::endl;
 	root = nullptr;
 	std::cout << "List created successfully" << std::endl;
-}
+}*/
 template<class T>
 TLList<T>::~TLList()
 {
@@ -53,7 +53,6 @@ template<class T>
 void TLList<T>::insert(const std::shared_ptr<T>& fig, size_t n)
 {
 	std::shared_ptr<TItem<T>> curr = move_to(n);
-	//TItem<T> item(fig);
 	std::shared_ptr<TItem<T>> item(new TItem<T>(fig));
 	if (curr == nullptr)
 	{
@@ -142,11 +141,16 @@ template<class T>
 TIterator<TItem<T>, T> TLList<T>::end()
 {
 	std::shared_ptr<TItem<T>> tmp = get_root();
-	while (tmp != nullptr)
+	while (tmp.get()->get_next() != nullptr)
 	{
-		if (tmp.get()->get_next() != nullptr) tmp = tmp.get()->get_next();
-		else break;
+		tmp = tmp.get()->get_next();
 	}
 	return TIterator<TItem<T>, T>(tmp);
 }
 template TLList<IFigure>;
+template<typename T>
+std::ostream& operator<<(std::ostream& os, const TLList<T>& list)
+{
+	list.print_all();
+	return os;
+}
