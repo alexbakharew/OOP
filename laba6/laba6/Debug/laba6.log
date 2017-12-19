@@ -1,2 +1,12 @@
-﻿  main.cpp
-  laba6.vcxproj -> C:\Users\repeinik\Documents\GitHub\OOP\laba6\Debug\laba6.exe
+﻿  stdafx.cpp
+  triangle.cpp
+  queue.cpp
+  octagon.cpp
+  main.cpp
+  llist.cpp
+  item.cpp
+  hexagon.cpp
+  allocator.cpp
+  Generating Code...
+  LINK : C:\Users\alexb\OneDrive\Documents\GitHub\OOP\laba6\Debug\laba6.exe not found or not built by the last incremental link; performing full link
+  laba6.vcxproj -> C:\Users\alexb\OneDrive\Documents\GitHub\OOP\laba6\Debug\laba6.exe
