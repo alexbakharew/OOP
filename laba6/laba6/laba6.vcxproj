@@ -18,33 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="headers\allocator.h" />
-    <ClInclude Include="headers\figure.h" />
-    <ClInclude Include="headers\hexagon.h" />
-    <ClInclude Include="headers\item.h" />
-    <ClInclude Include="headers\iterator.h" />
-    <ClInclude Include="headers\llist.h" />
-    <ClInclude Include="headers\octagon.h" />
-    <ClInclude Include="headers\queue.h" />
-    <ClInclude Include="headers\stdafx.h" />
-    <ClInclude Include="headers\targetver.h" />
-    <ClInclude Include="headers\triangle.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="sources\allocator.cpp" />
-    <ClCompile Include="sources\hexagon.cpp" />
-    <ClCompile Include="sources\item.cpp" />
-    <ClCompile Include="sources\llist.cpp" />
-    <ClCompile Include="sources\main.cpp" />
-    <ClCompile Include="sources\octagon.cpp" />
-    <ClCompile Include="sources\queue.cpp" />
-    <ClCompile Include="sources\stdafx.cpp" />
-    <ClCompile Include="sources\triangle.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{49532732-F757-4A4A-8269-52C9A9776A29}</ProjectGuid>
+    <ProjectGuid>{EC2EE9AA-B0AA-4087-9BAC-11CA1F9FB8A1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>laba6</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
@@ -166,6 +142,35 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="allocator.h" />
+    <ClInclude Include="figure.h" />
+    <ClInclude Include="hexagon.h" />
+    <ClInclude Include="item.h" />
+    <ClInclude Include="iterator.h" />
+    <ClInclude Include="llist.h" />
+    <ClInclude Include="octagon.h" />
+    <ClInclude Include="queue.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="triangle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="allocator.cpp" />
+    <ClCompile Include="hexagon.cpp" />
+    <ClCompile Include="item.cpp" />
+    <ClCompile Include="llist.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="octagon.cpp" />
+    <ClCompile Include="queue.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="triangle.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

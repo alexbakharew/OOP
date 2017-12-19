@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdlib>
-#include "../headers/queue.h"
+#include "queue.h"
 class TAllocator
 {
 public:

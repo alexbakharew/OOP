@@ -1,7 +1,8 @@
-#include "../headers/stdafx.h"
+#include "stdafx.h"
+//#include "stdafx.cpp"
 #include <cstdlib>
 #include <iostream>
-#include "../headers/octagon.h"
+#include "octagon.h"
 #include <cmath>
 Octagon::Octagon()
 {

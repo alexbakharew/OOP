@@ -1,13 +1,14 @@
-#include "../headers/stdafx.h"
+#include "stdafx.h"
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
 #include <memory>
-#include "../headers/figure.h"
-#include "../headers/hexagon.h"
-#include "../headers/octagon.h"
-#include "../headers/triangle.h"
-#include "../headers/item.h"
+#include "figure.h"
+#include "hexagon.h"
+#include "octagon.h"
+#include "triangle.h"
+#include "item.h"
+#include "allocator.h"
 
 template <typename T>
 TItem<T>::TItem(const std::shared_ptr<T>& itm)
@@ -15,6 +16,9 @@ TItem<T>::TItem(const std::shared_ptr<T>& itm)
 	item = itm;
 	next = prev = nullptr;
 }
+template<class T>
+ TAllocator TItem<T>::allocation_block(sizeof(TItem<T>), 100);
+
 template<class T>
 TItem<T>::~TItem() {}
 template<class T>
@@ -47,6 +51,16 @@ std::ostream& operator<<(std::ostream& os, const std::shared_ptr<TItem<T>>& item
 {
 	os << item.get()->get_item().get()->Print() << std::endl;
 	return os;
+}
+template<class T>
+void* TItem<T>::operator new(size_t size)
+{
+	return allocation_block.allocate();
+}
+template<class T>
+void TItem<T>::operator delete(void* ptr)
+{
+	allocation_block.deallocate(ptr);
 }
 template TItem<Triangle>;
 template TItem<Hexagon>;

@@ -1,7 +1,8 @@
-#include "../headers/stdafx.h"
+#include "stdafx.h"
 #include <iostream>
 #include <cstdlib>
-#include "../headers/allocator.h"
+#include "allocator.h"
+//#include "item.h"
 TAllocator::TAllocator(size_t sz, size_t amnt) : size(sz), amount(amnt)
 {
 	used_blocks = (char*)malloc(sz * amnt);
@@ -40,6 +41,6 @@ void TAllocator::deallocate(void* ptr)
 TAllocator::~TAllocator()
 {
 	free(used_blocks);
-	// Destruction of queueu in destructor!
+	// Destruction of queue in destructor!
 	std::cout << "All block was deallocated" << std::endl;
 }

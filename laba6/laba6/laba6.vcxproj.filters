@@ -15,66 +15,66 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\figure.h">
+    <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\hexagon.h">
+    <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\item.h">
+    <ClInclude Include="allocator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\iterator.h">
+    <ClInclude Include="figure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\llist.h">
+    <ClInclude Include="hexagon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\octagon.h">
+    <ClInclude Include="item.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\queue.h">
+    <ClInclude Include="iterator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\stdafx.h">
+    <ClInclude Include="llist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\targetver.h">
+    <ClInclude Include="octagon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\triangle.h">
+    <ClInclude Include="queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\allocator.h">
+    <ClInclude Include="triangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\allocator.cpp">
+    <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sources\hexagon.cpp">
+    <ClCompile Include="allocator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sources\item.cpp">
+    <ClCompile Include="hexagon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sources\llist.cpp">
+    <ClCompile Include="item.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sources\main.cpp">
+    <ClCompile Include="llist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sources\octagon.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sources\queue.cpp">
+    <ClCompile Include="octagon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sources\stdafx.cpp">
+    <ClCompile Include="queue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sources\triangle.cpp">
+    <ClCompile Include="triangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

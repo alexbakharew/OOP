@@ -9,14 +9,10 @@
 #include "item.h"
 #include "llist.h"
 #include "iterator.h"
+#include "item.cpp"
 
 template<class T>
 TLList<T>::TLList() : root(nullptr) {}
-/*{
-	std::cout << "Creation of List" << std::endl;
-	root = nullptr;
-	std::cout << "List created successfully" << std::endl;
-}*/
 template<class T>
 TLList<T>::~TLList()
 {
@@ -140,17 +136,12 @@ TIterator<TItem<T>, T> TLList<T>::begin()
 template<class T>
 TIterator<TItem<T>, T> TLList<T>::end()
 {
-	std::shared_ptr<TItem<T>> tmp = get_root();
-	while (tmp.get()->get_next() != nullptr)
-	{
-		tmp = tmp.get()->get_next();
-	}
-	return TIterator<TItem<T>, T>(tmp);
+	return TIterator<TItem<T>, T>(nullptr);
 }
-template TLList<IFigure>;
 template<typename T>
 std::ostream& operator<<(std::ostream& os, const TLList<T>& list)
 {
 	list.print_all();
 	return os;
 }
+template TLList<IFigure>;

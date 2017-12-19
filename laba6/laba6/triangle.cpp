@@ -1,8 +1,8 @@
-#include"../headers/stdafx.h"
+#include"stdafx.h"
 //#include "../headers/stdafx.h"
 #include <iostream>
 #include <cstdlib>
-#include "../headers/triangle.h"
+#include "triangle.h"
 #include <cmath>
 Triangle::Triangle() : Triangle(0, 0, 0) {};
 Triangle::Triangle(size_t i, size_t j, size_t k) : side_a(i), side_b(j), side_c(k)

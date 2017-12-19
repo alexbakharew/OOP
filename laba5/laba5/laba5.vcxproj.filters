@@ -30,6 +30,9 @@
     <ClInclude Include="item.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="iterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="llist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -37,9 +40,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="triangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="iterator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,17 +1,2 @@
-﻿  triangle.cpp
-c:\users\repeinik\documents\github\oop\laba6\laba6\sources\triangle.cpp(47): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
-  stdafx.cpp
-c:\users\repeinik\documents\github\oop\laba6\laba6\sources\stdafx.cpp(10): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
-  octagon.cpp
-c:\users\repeinik\documents\github\oop\laba6\laba6\sources\octagon.cpp(56): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
-  main.cpp
-c:\users\repeinik\documents\github\oop\laba6\laba6\sources\main.cpp(16): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
-  llist.cpp
-c:\users\repeinik\documents\github\oop\laba6\laba6\sources\llist.cpp(157): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
-  item.cpp
-c:\users\repeinik\documents\github\oop\laba6\laba6\sources\item.cpp(55): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
-  hexagon.cpp
-c:\users\repeinik\documents\github\oop\laba6\laba6\sources\hexagon.cpp(60): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
-  allocator.cpp
-c:\users\repeinik\documents\github\oop\laba6\laba6\sources\allocator.cpp(46): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
-  Generating Code...
+﻿  main.cpp
+  laba6.vcxproj -> C:\Users\alexb\OneDrive\Documents\GitHub\OOP\laba6\Debug\laba6.exe

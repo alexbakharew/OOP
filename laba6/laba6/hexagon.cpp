@@ -1,7 +1,7 @@
-#include "../headers/stdafx.h"
+#include "stdafx.h"
 #include <iostream>
 #include <cstdlib>
-#include "../headers/hexagon.h"
+#include "hexagon.h"
 #include <cmath>
 double length(dot d1, dot d2)
 {
