@@ -4,7 +4,7 @@
 class TAllocator
 {
 public:
-	TAllocator(size_t, size_t);
+	TAllocator(size_t sizeof_type, size_t space);
 	void* allocate();
 	void deallocate(void* pointer);
 	bool has_free_blocks();

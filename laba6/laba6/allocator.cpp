@@ -3,14 +3,14 @@
 #include <cstdlib>
 #include "allocator.h"
 //#include "item.h"
-TAllocator::TAllocator(size_t sz, size_t amnt) : size(sz), amount(amnt)
+TAllocator::TAllocator(size_t sizeof_type, size_t space) : size(sizeof_type), amount(space)
 {
-	used_blocks = (char*)malloc(sz * amnt);
-	for (size_t i = 0; i < amnt; i++)
+	used_blocks = (char*)malloc(sizeof_type * space);
+	for (size_t i = 0; i < space; i++)
 	{
-		free_blocks.push(&used_blocks[i]);
+		free_blocks.push(&used_blocks[i] + i*sizeof_type);
 	}
-	vacant = amnt;
+	vacant = space;
 	std::cout << "Allocation of memory complete" << std::endl;
 }
 void* TAllocator::allocate()
@@ -37,6 +37,7 @@ void TAllocator::deallocate(void* ptr)
 {
 	free_blocks.push(ptr);
 	vacant++;
+	std::cout << "Deallocation complete" << std::endl;
 }
 TAllocator::~TAllocator()
 {

@@ -13,6 +13,7 @@ bool TQueue::push(void* ptr)
 	if (tmp == nullptr) return false;
 	if (size == 0)
 	{
+		tmp->pointer = ptr;
 		begin = end = tmp;
 		tmp->next = tmp->prev = nullptr;
 		size++;
@@ -35,7 +36,8 @@ void* TQueue::pop()
 	{
 		void* tmp_ptr = tmp->pointer;
 		delete tmp;
-		begin = end;
+		tmp = nullptr;
+		begin = end = nullptr;
 		size--;
 		return tmp_ptr;
 	}
@@ -43,6 +45,7 @@ void* TQueue::pop()
 	end->next = nullptr;
 	void* tmp_ptr = tmp->pointer;
 	delete tmp;
+	tmp = nullptr;
 	size--;
 	return tmp_ptr;
 }
