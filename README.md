@@ -9,7 +9,9 @@ lab3 - Work with container, figures and shared_ptr
 
 lab4 - Template all structures
 
-lab5 - OCP principle from SOLID. Containers for containers, which consist of figures
+lab5 - User Defined Iterators for container
+
+lab6 - Memory Allocator for container
 
 lw1234 - combination of 1-4 lab works
 
